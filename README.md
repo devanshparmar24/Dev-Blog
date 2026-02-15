@@ -1,16 +1,19 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Blog project
+-Users can Create/Edit/Read blogs
 
-Currently, two official plugins are available:
+Tech Stack:
+React + Vite
+Node
+Appwrite #Backend as Service
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Capstone project showcasing all the concepts learnt so far and applied here altogether
 
-## React Compiler
+-.env.sample provided for environment variable reference for cloning
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-The project is completely working
 
-## Expanding the ESLint configuration
+-Make sure to setup Appwrite before in advance, but the authorization section is maintained in such a way that developer can use other than appwrite only changes that are supposed to make is in appwrite/auth and appwrite/conf inside the functions for authorization and database,storage purpose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-Well structured production level project
