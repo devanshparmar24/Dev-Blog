@@ -1,17 +1,23 @@
 import React, { useEffect } from 'react'
 import appwriteService from '../appwrite/config'
 import { Container, PostCard } from '../components'
-
+import { useSelector } from 'react-redux'
 
 function AllPosts() {
     const [posts, setPosts] = React.useState([])
+    const authStatus = useSelector((state)=> state.auth.status)
     useEffect(() => {
-        appwriteService.getPosts([]).then((posts) => {
+        if(authStatus){
+            appwriteService.getPosts([]).then((posts) => {
             if (posts) {
                 setPosts(posts.documents)
             }
         })
-    }, [])
+        }else{
+            setPosts([])
+        }
+        
+    }, [authStatus])
     return (
         <div className='w-full py-8'>
             <Container>
